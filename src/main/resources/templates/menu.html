@@ -9,20 +9,20 @@
 <h1>Hal's Spa</h1>
 <div id = "clientProfile">
     <h2>Your Profile</h2>
-    <p th:text="${name}"></p>
-    <p th:text="${skintype}"></p>
-    <p th:text="${manipedi}"></p>
+    <p th:text="${'Customer: ' + name}"></p>
+    <p th:text="${'Skin Type: ' + skintype}"></p>
+    <p th:text="${'Service: ' + manipedi}"></p>
 </div>
 <div id = "servicesMenu">
     <h3>Best Services for Your Skin Type:</h3>
     <th:block th:each="facial : ${appropriateFacials}">
         <p th:text="${facial}"></p>
     </th:block>
-    <div th:if="${manipedi} == manicure">
+    <div th:if="${manipedi} == Manicure">
         <h3>Manicure:</h3>
         <p th:replace="fragments :: manicureDescription"></p>
     </div>
-    <div th:if="${manipedi} == pedicure">
+    <div th:if="${manipedi} == Pedicure">
         <h3>Pedicure:</h3>
         <p th:replace="fragments :: pedicureDescription"></p>
     </div>
