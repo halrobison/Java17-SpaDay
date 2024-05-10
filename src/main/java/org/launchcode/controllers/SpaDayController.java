@@ -24,7 +24,7 @@ public class SpaDayController {
         }
     }
 
-    @GetMapping(value="")
+    @GetMapping(value="/")
     @ResponseBody
     public String customerForm (Model model) {
         String html = "<form method = 'post'>" +
